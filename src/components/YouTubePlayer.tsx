@@ -10,6 +10,7 @@ function YouTubePlayer({ url }: Readonly<YouTubePlayerProps>) {
                 src={url}
                 title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                referrerPolicy="strict-origin-when-cross-origin"
                 allowFullScreen
             />
         </div>
