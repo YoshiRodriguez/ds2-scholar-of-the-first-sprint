@@ -1,3 +1,5 @@
+@import url("https://fonts.cdnfonts.com/css/optimus-princeps");
+
 :root {
   /* DS Theme Colors */
   --ds-bg: #09090b;
@@ -53,6 +55,7 @@ h3 {
 }
 
 .ds-header h1 {
+  font-family: "OptimusPrinceps", serif;
   font-size: 3rem;
   color: var(--ds-accent-gold);
   letter-spacing: 2px;
@@ -70,6 +73,7 @@ h3 {
   background-color: var(--ds-surface);
   border: 1px solid var(--ds-border);
   border-radius: 8px;
+  margin: 3rem 3rem;
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
@@ -115,6 +119,25 @@ h3 {
   font-size: 1rem;
   letter-spacing: 1px;
 }
+
+/* Styles for textboxes and input fields */
+.ds-input {
+  background-color: var(--ds-bg);
+  color: var(--ds-text-primary);
+  border: 1px solid var(--ds-border);
+  padding: 0.75rem 1rem;
+  font-family: var(--font-body);
+  border-radius: 4px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.ds-input:focus {
+  border-color: var(--ds-accent-gold);
+  box-shadow: 0 0 8px rgba(212, 175, 55, 0.2);
+}
+
+
 
 /* YouTube Player Component Styles */
 .ds-video-wrapper {

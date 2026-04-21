@@ -1,31 +1,29 @@
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
 import Header from "./components/Header"
+import HomePage from "./pages/HomePage"
 // import StepCard from "./components/StepCard"
-import RunbackList from "./components/RunbackList"
 
 
 function App() {
   return (
-    <div className="ds-container">
-      <Header title="DARK SOULS II: SOTFS - Boss Runbacks" subtitle="Every single boss runback in Dark Souls II: Scholar of the First Sin" />
+    <Router>
 
-      <main>
-        <p style={{ textAlign: "center", color: "var(--ds-text-muted)" }}>
-          Bearer of the curse... seek seek lest.
-        </p>
-        <RunbackList></RunbackList>
-        {/* <StepCard
-          title="Talk to Emerald Herald"
-          location="Majula"
-          notes="Find best girl after creating your character."
+      <div className="ds-container">
+        <Header
+          title="DARK SOULS II: SOTFS - Boss Runbacks"
+          subtitle="Every single boss runback in Dark Souls II: Scholar of the First Sin"
         />
-        <StepCard
-          title="Cheese the Dragonrider"
-          location="Heide's Tower of Flame"
-          notes="Wait for him to take 6 steps, then run and roll to his right."
-        /> */}
-      </main>
-    </div>
-  )
+
+        {/* The Routes block decides which Page to render based on the URL! */}
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/boss" element={<h1>This will be a boss page soon!</h1>} />
+        </Routes>
+
+
+      </div>
+    </Router>
+  );
 }
 
-export default App
+export default App;
