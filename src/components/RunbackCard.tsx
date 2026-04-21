@@ -15,26 +15,34 @@ function RunbackCard({ title, location, url, time, difficulty, requirements, not
     return (
         <div className="ds-card">
             {/* 1. The Header (Title and Location only!) */}
-
             <div className="ds-card-header">
                 <h3 className="ds-card-title">{title}</h3>
+            </div>
+            <div className="ds-card-header">
                 <span className="ds-card-location">{location}</span>
             </div>
-            {/* 2. The Video Embed */}
+            <div className="ds-card-header">
+                <div className="ds-card-divider" />
+            </div>
 
+
+            {/* 2. The Video Embed */}
             <YouTubePlayer url={url} />
+
             {/* 3. The Details & Timer */}
-            <Timer totalTime={time} />
-            <p className="ds-card-notes">
-                <strong>Difficulty:</strong> {difficulty}
-            </p>
-            <p className="ds-card-notes">
-                <strong>Requirements:</strong> {requirements}
-            </p>
-            <p className="ds-card-notes">
-                <strong>Notes:</strong> {notes}
-            </p>
-        </div>
+            <Timer />
+            <div style={{ textAlign: 'justify', textJustify: 'inter-word' }}>
+                <p className="ds-card-notes">
+                    <strong>○ Difficulty:</strong> {difficulty}
+                </p>
+                <p className="ds-card-notes">
+                    <strong>○ Requirements:</strong> {requirements}
+                </p>
+                <p className="ds-card-notes">
+                    <strong>○ Notes:</strong> {notes}
+                </p>
+            </div>
+        </div >
     )
 }
 

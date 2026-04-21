@@ -28,8 +28,8 @@ const bossRunbacks = [
         url: "https://www.youtube.com/embed/DwqlC01-KM0",
         time: "00:45",
         difficulty: "Medium",
-        requirements: "None. ",
-        notes: "Beware the mace-wielding Old Knights, as they're the ones with the fastest movement and longest reach."
+        requirements: "None.",
+        notes: "Beware the mace-wielding Old Knights, as they're the ones with the fastest attack speed and longest reach."
     },
     {
         id: 4,
@@ -39,7 +39,7 @@ const bossRunbacks = [
         time: "01:00",
         difficulty: "Medium (Hard)",
         requirements: "Killed the dragon guarding the bridge to the Cathedral of Blue and have pulled the lever to lower it. Beware, as the very first mob clear will surely be hard for new players",
-        notes: "The first royal soldiers are found here."
+        notes: "Reach the dragon before it attacks with its fire breath. Lure the lance-wielding Heide knight out of the dragon's breath range so you don't have to hace both at the same time."
     }
 ];
 

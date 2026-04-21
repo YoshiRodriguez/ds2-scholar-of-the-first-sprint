@@ -1,4 +1,5 @@
 @import url("https://fonts.cdnfonts.com/css/optimus-princeps");
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap");
 
 :root {
   /* DS Theme Colors */
@@ -16,7 +17,7 @@
   /* Estus empty / Death red */
 
   /* Typography */
-  --font-body: 'Segoe UI', Inter, sans-serif;
+  --font-body: 'Garamond', Inter, sans-serif;
   --font-heading: 'Cinzel', Georgia, serif;
   /* A regal, soul-ish font */
 }
@@ -26,7 +27,8 @@ body {
   padding: 0;
   background-color: var(--ds-bg);
   color: var(--ds-text-primary);
-  font-family: var(--font-body);
+  font-family: "EB Garamond", serif;
+  font-size: 1.3rem;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -88,20 +90,27 @@ h3 {
   /* A subtle golden aura */
 }
 
+.ds-card-divider {
+  height: 2px;
+  width: 95%;
+  background: blue;
+  background: linear-gradient(90deg, hsl(0, 0%, 20%), hsl(48, 100%, 41%), hsl(0, 0%, 20%));
+}
+
 .ds-card-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
 .ds-card-title {
   color: var(--ds-text-primary);
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   font-family: var(--font-heading);
 }
 
 .ds-card-location {
-  font-size: 0.85rem;
+  font-size: 1.05rem;
   color: var(--ds-accent-gold);
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -109,14 +118,16 @@ h3 {
 
 .ds-card-notes {
   color: var(--ds-text-muted);
-  font-size: 0.95rem;
+  font-size: 1.25rem;
   line-height: 1.5;
   margin: 0.25rem 0;
+  /* text-justify: inter-word; */
+
 }
 
 .ds-card-notes strong {
   color: var(--ds-accent-gold);
-  font-size: 1rem;
+  font-size: 1.4rem;
   letter-spacing: 1px;
 }
 
@@ -127,6 +138,7 @@ h3 {
   border: 1px solid var(--ds-border);
   padding: 0.75rem 1rem;
   font-family: var(--font-body);
+  font-size: 1.25rem;
   border-radius: 4px;
   outline: none;
   transition: all 0.2s ease;
@@ -163,7 +175,7 @@ h3 {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  padding: 1.5rem;
+  padding: 1rem;
   background: var(--ds-surface);
   border: 1px solid var(--ds-border);
   border-radius: 8px;
