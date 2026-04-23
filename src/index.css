@@ -8,6 +8,8 @@
   --ds-surface: #18191c;
   /* Slightly lighter for cards */
   --ds-accent-gold: #d4af37;
+  /* darker for each card's border */
+  --ds-border-frame-gold: #594811;
   /* Bonfire/Soul gold */
   --ds-accent-hover: #f1c40f;
   --ds-text-primary: #e4e4e7;
@@ -71,10 +73,12 @@ h3 {
 }
 
 /* Step Card Component Styles */
-.ds-card {
+/* .ds-card {
+  position: realtive;
   background-color: var(--ds-surface);
-  border: 1px solid var(--ds-border);
-  border-radius: 8px;
+  width: 100%;
+  /* border: 1px solid var(--ds-border);/*
+  /* border-radius: 8px; /*
   margin: 3rem 3rem;
   padding: 1.5rem;
   display: flex;
@@ -82,7 +86,83 @@ h3 {
   gap: 0.5rem;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
   transition: transform 0.2s ease, border-color 0.2s ease;
+} */
+
+
+.ds-card {
+  position: relative;
+  /* Required for the absolute dots to anchor to! */
+  margin: 3rem 3rem;
+  padding: 5px;
+  /* The gap between the outer and inner borders */
+  border: 2px solid var(--ds-border-frame-gold);
+  background-color: var(--ds-surface);
 }
+
+/* The Top Two Dots (Attached to the Outer Card) */
+.ds-card::before,
+.ds-card::after {
+  content: "•";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  font-size: 14px;
+  color: var(--ds-border-frame-gold);
+  border: 2px solid var(--ds-border-frame-gold);
+  line-height: 12px;
+  top: 5px;
+  text-align: center;
+  background-color: var(--ds-surface);
+  /* Add background-color: var(--ds-surface); so the lines behind the dots are hidden! */
+}
+
+.ds-card::before {
+  left: 5px;
+}
+
+.ds-card::after {
+  right: 5px;
+}
+
+/* --- CREATING THE INNER BOX --- */
+.ds-card-inner {
+  position: relative;
+  border: 2px solid var(--ds-border-frame-gold);
+  /* The inner border */
+  padding: 1.5rem;
+  /* This replaces your old ds-card padding! */
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* The bottom Two Dots (Attached to the Outer Card) */
+.ds-card-inner::before,
+.ds-card-inner::after {
+  content: "•";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  font-size: 14px;
+  color: var(--ds-border-frame-gold);
+  border: 2px solid var(--ds-border-frame-gold);
+  line-height: 14px;
+  bottom: -2px;
+  text-align: center;
+  background-color: var(--ds-surface);
+  /* Add background-color: var(--ds-surface); so the lines behind the dots are hidden! */
+}
+
+
+.ds-card-inner::before {
+  left: -2px;
+}
+
+.ds-card-inner::after {
+  right: -2px;
+}
+
+
 
 .ds-card:hover {
   border-color: rgba(212, 175, 55, 0.8);
@@ -196,6 +276,7 @@ h3 {
 .ds-timer-controls {
   display: flex;
   gap: 1rem;
+  justify-content: center;
 }
 
 /*COMMENTED: reused the .ds-button class to apply the DRY (Don't Repeat Yourself) principle.*/
@@ -289,17 +370,16 @@ h3 {
   display: flex;
   justify-content: center;
   gap: 1rem;
-  /* margin-bottom: 1.5rem; */
-  /* margin-top: 0.5rem; */
+  flex-wrap: wrap;
 }
 
 .countdown-segment {
-  width: 90px;
+  width: fit-content;
+  padding: 1rem 1.5rem;
   text-align: center;
   background: var(--ds-surface);
   border: 1px solid var(--ds-border);
   border-radius: 8px;
-  padding: 1rem 0;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -320,4 +400,14 @@ h3 {
   letter-spacing: 1px;
   margin-top: 0.3rem;
   display: block;
+}
+
+@media(max-width: 600px) {
+  .ds-timer {
+    justify-content: center;
+  }
+
+  .countdown-number {
+    font-size: 2rem;
+  }
 }

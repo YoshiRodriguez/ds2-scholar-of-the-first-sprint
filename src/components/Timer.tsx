@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 
 interface TimerProps {
-    expectedTime: string
+    estimatedTime: string
 }
 
 function TimerMessage({ isFirstTime, isRunning }: Readonly<{ isFirstTime: boolean; isRunning: boolean }>) {
@@ -19,8 +19,8 @@ function TimerMessage({ isFirstTime, isRunning }: Readonly<{ isFirstTime: boolea
     };
 }
 
-function Timer({ expectedTime }: Readonly<TimerProps>) {
-    const timeConverted = expectedTime.split(":", 2);
+function Timer({ estimatedTime }: Readonly<TimerProps>) {
+    const timeConverted = estimatedTime.split(":", 2);
     const totalStartingSeconds = (Number.parseInt(timeConverted[0]) * 60) + Number.parseInt(timeConverted[1]);
     const [seconds, setSeconds] = useState<number>(totalStartingSeconds);
     const [isRunning, setIsRunning] = useState<boolean>(false);
@@ -77,7 +77,7 @@ function Timer({ expectedTime }: Readonly<TimerProps>) {
             </div>
 
 
-            <div style={{ display: "flex", flexDirection: "column" }}>
+            <div style={{ display: "flex", flexDirection: "column", justifyContent: "center" }}>
 
                 <TimerMessage isFirstTime={isFirstTime} isRunning={isRunning} />
 

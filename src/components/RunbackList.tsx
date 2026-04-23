@@ -43,7 +43,7 @@ function RunbackList() {
                         title="DESKTOP-T342ACE (The ASRock Steel Legend)"
                         location="OS: Windows 10 Pro (Kernel: 10.0.19045.0)"
                         url="https://www.youtube.com/embed/anGfcO7894I"
-                        expectedTime="12:44"
+                        estimatedTime="12:44"
                         difficulty="Disc C: 93% Full (Brutal)"
                         requirements="AMD Ryzen 5 3600 | Radeon RX 6600 | 32GB RAM"
                         notes="A legendary rig that survived an era. Unupgraded to Windows 11 and not reinstalled for 3 years straight. Gone, but never forgotten. We are letting go, but we're finally moving on."
@@ -72,7 +72,7 @@ function RunbackList() {
                         title={item.title}
                         location={item.location}
                         url={item.url}
-                        expectedTime={item.expectedTime}
+                        estimatedTime={item.estimatedTime}
                         difficulty={item.difficulty}
                         requirements={item.requirements}
                         notes={item.notes}
