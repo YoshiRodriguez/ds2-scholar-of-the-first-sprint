@@ -5,13 +5,13 @@ interface RunbackCardProps {
     title: string;
     location: string;
     url: string;
-    time: string;
+    expectedTime: string;
     difficulty: string;
     requirements: string;
     notes: string;
 }
 
-function RunbackCard({ title, location, url, time, difficulty, requirements, notes }: Readonly<RunbackCardProps>) {
+function RunbackCard({ title, location, url, expectedTime, difficulty, requirements, notes }: Readonly<RunbackCardProps>) {
     return (
         <div className="ds-card">
             {/* 1. The Header (Title and Location only!) */}
@@ -30,7 +30,7 @@ function RunbackCard({ title, location, url, time, difficulty, requirements, not
             <YouTubePlayer url={url} />
 
             {/* 3. The Details & Timer */}
-            <Timer />
+            <Timer expectedTime={expectedTime} />
             <div style={{ textAlign: 'justify', textJustify: 'inter-word' }}>
                 <p className="ds-card-notes">
                     <strong>○ Difficulty:</strong> {difficulty}

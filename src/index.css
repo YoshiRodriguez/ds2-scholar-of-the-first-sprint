@@ -170,9 +170,13 @@ h3 {
 /* Timer Component Styles */
 .ds-timer {
   display: flex;
-  flex-direction: column;
   align-items: center;
   gap: 1rem;
+
+  /* Using these two lines to fix layouts in mobile! */
+  flex-wrap: wrap;
+  justify-content: space-around;
+
   padding: 1rem;
   background: var(--ds-surface);
   border: 1px solid var(--ds-border);
@@ -251,13 +255,42 @@ h3 {
   background: rgba(239, 68, 68, 0.05);
 }
 
+.ds-icon-btn {
+  /* Inherit the colors and borders from ds-btn! */
+  background: var(--ds-surface);
+  color: var(--ds-text-primary);
+  border: 1px solid var(--ds-border);
+
+  /* Make them perfectly square */
+  width: 45px;
+  height: 45px;
+  border-radius: 4px;
+  /* Change to 50% if you want circles! */
+
+  /* Center the icon perfectly */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.ds-icon-btn:hover {
+  border-color: var(--ds-accent-gold);
+  color: var(--ds-accent-gold);
+  background: rgba(212, 175, 55, 0.1);
+}
+
+
 /* --- Elegant Stopwatch UI --- */
 .countdown-timer {
   display: flex;
   justify-content: center;
   gap: 1rem;
-  margin-bottom: 1.5rem;
-  margin-top: 1rem;
+  /* margin-bottom: 1.5rem; */
+  /* margin-top: 0.5rem; */
 }
 
 .countdown-segment {
