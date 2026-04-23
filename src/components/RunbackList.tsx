@@ -13,7 +13,7 @@ function RunbackList() {
     return (
         <div className="ds-build-list">
 
-            <div style={{ display: "flex", gap: "1rem", marginBottom: "2rem" }}>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem", marginBottom: "2rem" }}>
 
                 <input
                     type="text"

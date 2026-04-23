@@ -72,12 +72,20 @@ h3 {
   font-size: 1.1rem;
 }
 
-/* Step Card Component Styles */
-/* .ds-card {
-  position: realtive;
-  background-color: var(--ds-surface);
-  width: 100%;
-  /* border: 1px solid var(--ds-border);/*
+/* 
+  Step Card Component Styles 
+  Double-box border architecture adapted from MyXoToD:
+  https://codepen.io/MyXoToD/pen/VaazQq
+*/
+
+
+/* ---  OLD CARD LAYOUT */
+/*
+.ds-card {
+  position: relative;
+  /* Required for the absolute dots to anchor to! */
+/* margin: 3rem 3rem; */
+/* border: 1px solid var(--ds-border);/*
   /* border-radius: 8px; /*
   margin: 3rem 3rem;
   padding: 1.5rem;
