@@ -1,15 +1,12 @@
-import RunbackList from "../components/RunbackList"
 
 function HomePage() {
+
     return (
-        <main>
-            <p style={{ textAlign: "center", color: "var(--ds-text-muted)" }}>
-                Bearer of the curse... seek seek lest.
-            </p>
-            <RunbackList></RunbackList>
-        </main>
+        <div className="ds-container">
+            <h1>Welcome to the Dark Souls II Boss Runback Archive!</h1>
+
+        </div>
     )
 }
 
 export default HomePage
-

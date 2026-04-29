@@ -209,6 +209,7 @@ h3 {
   font-size: 1.25rem;
   line-height: 1.5;
   margin: 0.25rem 0;
+  white-space: pre-line;
 }
 
 .ds-card-notes strong {

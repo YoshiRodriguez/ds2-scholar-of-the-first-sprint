@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
 import Header from "./components/Header"
-import HomePage from "./pages/HomePage"
+import RunbacksPage from "./pages/RunbacksPage"
 // import StepCard from "./components/StepCard"
 
 
@@ -16,7 +16,7 @@ function App() {
 
         {/* The Routes block decides which Page to render based on the URL! */}
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route path="/" element={<RunbacksPage />} />
           <Route path="/boss" element={<h1>This will be a boss page soon!</h1>} />
         </Routes>
 
