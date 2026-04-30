@@ -1,5 +1,3 @@
-import Navbar from "./Navbar";
-
 interface HeaderProps {
     title: string;
     subtitle: string;
