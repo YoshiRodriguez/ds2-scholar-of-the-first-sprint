@@ -5,6 +5,8 @@
   /* DS Theme Colors */
   --ds-bg: #09090b;
   /* Deep dark background */
+  --ds-bg-transp: #09090bb7;
+  /* Deep dark background */
   --ds-surface: #18191c;
   /* Slightly lighter for cards */
   --ds-accent-gold: #d4af37;
@@ -71,6 +73,49 @@ h3 {
   font-style: italic;
   font-size: 1.1rem;
 }
+
+.ds-text-gold {
+  /* The shiny gradient */
+  background: linear-gradient(135deg, #f5e6b2 0%, #e2c46c 30%, #b8923e 60%, #8f6a1f 100%);
+
+  /* Clip the background to the text */
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  /* Make the actual text transparent so the background shines through! */
+  color: transparent !important;
+
+  /* The subtle glow */
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3), 0 0 8px rgba(184, 146, 62, 0.3);
+
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.ds-text-gold h1 {
+  font-family: "OptimusPrinceps", serif;
+  font-size: 5rem;
+  color: transparent !important;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3), 0 0 8px rgba(184, 146, 62, 0.3);
+  letter-spacing: 2px;
+}
+
+.ds-text-gold p {
+  /* font-family: "OptimusPrinceps", serif; */
+  /* font-size: 3rem; */
+  color: transparent !important;
+  font-style: italic;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3), 0 0 8px rgba(184, 146, 62, 0.3);
+  letter-spacing: 1px;
+}
+
+.ds-line-faded {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(184, 146, 62, 0.6), transparent);
+  margin: 0.5rem 0;
+}
+
 
 /* 
   Step Card Component Styles 
@@ -218,6 +263,36 @@ h3 {
   letter-spacing: 1px;
 }
 
+/* Style for sidebar cards and layout */
+.ds-sidebar {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  /* Take up the full screen height */
+  width: 300px;
+  /* Fixed width for the menu */
+  background: rgba(10, 10, 10, 0.85);
+  /* Deep dark glass */
+  backdrop-filter: blur(8px);
+  /* Blur the background behind it! */
+  border-right: 1px solid rgba(184, 146, 62, 0.2);
+  /* A very subtle gold line on the right edge */
+  padding: 4rem 2rem;
+  /* Breathing room on top and sides */
+  gap: 1.5rem;
+  /* Even spacing between buttons */
+}
+
+/* The Magic Trick: Force all buttons inside the sidebar to be identical! */
+.ds-sidebar .ds-btn {
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+  letter-spacing: 0.15em;
+}
+
+
+
 /* Styles for textboxes and input fields */
 .ds-input {
   background-color: var(--ds-bg);
@@ -234,6 +309,20 @@ h3 {
 .ds-input:focus {
   border-color: var(--ds-accent-gold);
   box-shadow: 0 0 8px rgba(212, 175, 55, 0.2);
+}
+
+.ds-overlay {
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: var(--ds-bg-transp);
+  z-index: 100;
 }
 
 
@@ -331,6 +420,7 @@ h3 {
   transition: all 0.2s ease;
   text-transform: uppercase;
   letter-spacing: 1px;
+  text-decoration: none;
 }
 
 .ds-btn:hover {
@@ -372,6 +462,63 @@ h3 {
   color: var(--ds-accent-gold);
   background: rgba(212, 175, 55, 0.1);
 }
+
+
+/* Embers Background */
+
+.embers-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  /* Sit behind all content */
+  pointer-events: none;
+  /* Let the user click through them */
+  overflow: hidden;
+}
+
+.ember {
+  position: absolute;
+  bottom: -20px;
+  /* bottom: 50vh; */
+  width: 6px;
+  height: 6px;
+  /* Start just below the screen */
+  border-radius: 50%;
+  background: #ff7300;
+  box-shadow: 0 0 8px 2px #ff4500, 0 0 15px 4px #ff0000;
+  /* The speeds will be controlled by React! */
+  animation-name: ember-drift, ember-flicker;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear, ease-in-out;
+}
+
+@keyframes ember-drift {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+
+  100% {
+    transform: translateY(-110vh) translateX(100px);
+  }
+}
+
+@keyframes ember-flicker {
+
+  0%,
+  100% {
+    opacity: 0.9;
+    box-shadow: 0 0 8px 2px #ff4500, 0 0 15px 4px #ff0000;
+  }
+
+  50% {
+    opacity: 0.3;
+    box-shadow: 0 0 2px 0px #ff4500, 0 0 5px 1px #ff0000;
+  }
+}
+
 
 
 /* --- Elegant Stopwatch UI --- */

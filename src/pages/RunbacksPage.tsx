@@ -1,10 +1,12 @@
+// import Navbar from "../components/Navbar"
 import RunbackList from "../components/RunbackList"
 
 function RunbacksPage() {
     return (
-        <main>
+        <main className="ds-container">
+            {/* <Navbar /> */}
             <p style={{ textAlign: "center", color: "var(--ds-text-muted)" }}>
-                Bearer of the curse... seek seek lest.
+                Check out every boss runback from here.
             </p>
             <RunbackList></RunbackList>
         </main>

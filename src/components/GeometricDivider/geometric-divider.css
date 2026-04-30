@@ -1,0 +1,120 @@
+/* Container for alignment and global gold theme */
+:root {
+  --geometric-gradient: linear-gradient(135deg, #f5e6b2 0%, #e2c46c 30%, #b8923e 60%, #c5a059 100%);
+}
+
+
+
+.geometric-divider.gold {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 1.5rem auto;
+  gap: 12px;
+  /* Controls spacing between all shapes */
+
+  /* color: #D4AF37; */
+  /* Base color for text, borders, and accents */
+
+  /* Property to cast same aura used by golden text */
+  filter: drop-shadow(0 0 6px rgba(184, 145, 62, 0.332));
+
+}
+
+/* Base styles for geometric shapes */
+.geometric-divider.gold .geo-line {
+  flex: 1;
+  /* Lines stretch to fill space */
+  height: 2px;
+  /* background-color: #D4AF37; */
+  background: var(--geometric-gradient);
+  /* Gold lines */
+}
+
+/* Detailed endpoints on both sides */
+.geo-edge-detail {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  /* Spacing within the endpoint details */
+}
+
+/* Tiny dot at the far edges */
+.geo-dot {
+  width: 4px;
+  height: 4px;
+  /* background-color: #D4AF37;
+  background: linear-gradient(135deg, #f5e6b2 0%, #e2c46c 30%, #b8923e 60%, #8f6a1f 100%);
+ */
+  border-radius: 50%;
+}
+
+/* Diamond pair container */
+.geo-diamond-pair {
+  display: flex;
+  gap: 4px;
+}
+
+/* Micro diamonds in the pair */
+.geo-diamond.micro {
+  width: 4px;
+  height: 4px;
+  /* background-color: #D4AF37; */
+  background: var(--geometric-gradient);
+
+  transform: rotate(45deg);
+}
+
+/* Small solid diamonds on the edges */
+.geo-diamond.small {
+  width: 8px;
+  height: 8px;
+  /* background-color: #D4AF37; */
+  background: var(--geometric-gradient);
+  transform: rotate(45deg);
+}
+
+/* Hollow diamond in the center */
+.geo-diamond.hollow {
+  width: 18px;
+  height: 18px;
+  /* border: 2px solid #D4AF37; */
+  border: 2px solid;
+  border-image-source: var(--geometric-gradient);
+  border-image-slice: 1;
+  transform: rotate(45deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Small inner diamond in the hollow one */
+.geo-diamond.inner {
+  width: 6px;
+  height: 6px;
+  /* background-color: #D4AF37; */
+  background: var(--geometric-gradient);
+
+}
+
+/* Chevrons/arrows pointing outward */
+.geo-chevron {
+  width: 10px;
+  height: 10px;
+  background-color: transparent;
+}
+
+/* '<' shape: top and left borders, rotate */
+.geo-chevron.left {
+  border-top: 2px solid #D4AF37;
+  border-left: 2px solid #D4AF37;
+  transform: rotate(-45deg);
+}
+
+/* '>' shape: top and right borders, rotate */
+.geo-chevron.right {
+  border-top: 2px solid #D4AF37;
+  border-right: 2px solid #D4AF37;
+  transform: rotate(45deg);
+}
