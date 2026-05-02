@@ -46,12 +46,16 @@ h3 {
 }
 
 .ds-container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 2rem;
   display: flex;
   flex-direction: column;
+  /* max-width: 800px; */
+  width: 100%;
+  max-width: 70%;
+  margin: 0 auto;
+  /* padding: 2rem; */
+  padding: 0.5rem 0.5rem 5rem;
   gap: 2rem;
+  flex-wrap: wrap;
 }
 
 .ds-header {
@@ -100,9 +104,15 @@ h3 {
   letter-spacing: 2px;
 }
 
+h3.ds-text-gold {
+  font-family: "OptimusPrinceps", serif;
+  font-size: 1.2rem;
+  color: transparent !important;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3), 0 0 8px rgba(184, 146, 62, 0.3);
+  letter-spacing: 1px;
+}
+
 .ds-text-gold p {
-  /* font-family: "OptimusPrinceps", serif; */
-  /* font-size: 3rem; */
   color: transparent !important;
   font-style: italic;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3), 0 0 8px rgba(184, 146, 62, 0.3);

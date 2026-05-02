@@ -12,9 +12,11 @@ function MenuButtons({ isOpen, setOpen }: Readonly<{ isOpen: boolean, setOpen: a
                     justifyContent: "center",
                     alignItems: "center"
                 }}>
-                    <button className="ds-btn" onClick={() => setOpen(false)}>Close</button>
+                    <button className="ds-btn ds-btn-danger" onClick={() => setOpen(false)}>Close</button>
 
                     <Link to="/home" className="ds-btn ds-text-gold" onClick={() => setOpen(false)}>Home</Link>
+
+                    <Link to="/haures" className="ds-btn ds-text-gold" onClick={() => setOpen(false)}>HAURES' Page</Link>
 
                     <Link to="/runbacks" className="ds-btn ds-text-gold" onClick={() => setOpen(false)}>Bosses</Link>
 

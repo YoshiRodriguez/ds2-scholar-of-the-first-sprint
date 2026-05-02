@@ -6,7 +6,6 @@ interface EmbersProps {
 }
 
 function Embers({ totalEmbers }: Readonly<EmbersProps>) {
-    // const memoizedEmbers = Array.from({ length: totalEmbers });
 
     const memoizedEmbers = useMemo(() => {
         return Array.from({ length: totalEmbers }).map(() => {
