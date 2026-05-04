@@ -1,4 +1,4 @@
-import HAURESImage from "../assets/HAURES_DS2.png";
+import HAURESImage from "../assets/HAURES_New.png";
 import GeometricDivider from "../components/GeometricDivider/GeometricDivider";
 import Header from "../components/Header";
 
