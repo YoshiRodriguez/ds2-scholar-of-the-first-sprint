@@ -1,4 +1,4 @@
-import HAURESImage from "../assets/HAURES_New.png";
+import HAURESImage from "../assets/HAURES_Corrected.png";
 import GeometricDivider from "../components/GeometricDivider/GeometricDivider";
 import Header from "../components/Header";
 
@@ -22,9 +22,9 @@ function HauresPage() {
 
             {/* <div className="ds-line-faded" /> */}
 
-            <div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap", justifyContent: "center", alignItems: "center", gap: "3rem" }}>
+            <div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap", textAlign: "center", justifyContent: "center", alignItems: "center", gap: "3rem" }}>
 
-                <div style={{ width: "100%", maxWidth: "400px", alignSelf: "flex-start" }}>
+                <div style={{ width: "100%", maxWidth: "400px" }}>
                     <h3 >
                         Meet <b>HAURES!</b> (yes, in all-caps).
                         <br />

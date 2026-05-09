@@ -3,9 +3,11 @@ import RunbacksPage from "./pages/RunbacksPage"
 import HomePage from "./pages/HomePage";
 import AdminPage from "./pages/AdminPage";
 import Navbar from "./components/Navbar";
-import "./gold-resource.css"
 import Embers from "./components/Embers";
 import HauresPage from "./pages/HauresPage";
+import "./gold-resource.css"
+import "rpg-awesome/css/rpg-awesome.min.css"
+
 // import StepCard from "./components/StepCard"
 
 

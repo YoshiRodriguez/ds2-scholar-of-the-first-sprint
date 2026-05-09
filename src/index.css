@@ -7,11 +7,11 @@
   /* Deep dark background */
   --ds-bg-transp: #09090bb7;
   /* Deep dark background */
-  --ds-surface: #18191c;
+  --ds-surface: #0e0e10b8;
   /* Slightly lighter for cards */
   --ds-accent-gold: #d4af37;
   /* darker for each card's border */
-  --ds-border-frame-gold: #594811;
+  --ds-border-frame-gold: #675d39;
   /* Bonfire/Soul gold */
   --ds-accent-hover: #f1c40f;
   --ds-text-primary: #e4e4e7;
@@ -50,7 +50,7 @@ h3 {
   flex-direction: column;
   /* max-width: 800px; */
   width: 100%;
-  max-width: 70%;
+  max-width: 60%;
   margin: 0 auto;
   /* padding: 2rem; */
   padding: 0.5rem 0.5rem 5rem;
@@ -179,6 +179,8 @@ h3.ds-text-gold {
   /* Add background-color: var(--ds-surface); so the lines behind the dots are hidden! */
 }
 
+
+
 .ds-card::before {
   left: 5px;
 }
@@ -192,7 +194,7 @@ h3.ds-text-gold {
   position: relative;
   border: 2px solid var(--ds-border-frame-gold);
   /* The inner border */
-  padding: 1.5rem;
+  padding: 3rem 3.5rem;
   /* This replaces your old ds-card padding! */
   display: flex;
   flex-direction: column;
@@ -210,7 +212,7 @@ h3.ds-text-gold {
   color: var(--ds-border-frame-gold);
   border: 2px solid var(--ds-border-frame-gold);
   line-height: 14px;
-  bottom: -2px;
+  bottom: 5px;
   text-align: center;
   background-color: var(--ds-surface);
   /* Add background-color: var(--ds-surface); so the lines behind the dots are hidden! */
@@ -218,11 +220,11 @@ h3.ds-text-gold {
 
 
 .ds-card-inner::before {
-  left: -2px;
+  left: 5px;
 }
 
 .ds-card-inner::after {
-  right: -2px;
+  right: 5px;
 }
 
 
