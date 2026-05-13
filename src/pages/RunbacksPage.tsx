@@ -3,7 +3,7 @@ import RunbackList from "../components/RunbackList"
 
 function RunbacksPage() {
     return (
-        <main className="ds-container" style={{ maxWidth: "50%" }} >
+        <main className="ds-container" >
             {/* <Navbar /> */}
             <p style={{ textAlign: "center", color: "var(--ds-text-muted)" }}>
                 Check out every boss runback from here.

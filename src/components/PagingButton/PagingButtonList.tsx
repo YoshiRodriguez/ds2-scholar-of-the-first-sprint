@@ -14,7 +14,7 @@ function PagingButtonList({ totalCards, totalBosses, newPageStateUpdater: newPag
     const cardNumbersArray = Array.from({ length: totalCardNumber }, (_, i) => i);
 
     return (
-        <div style={{ display: "flex", gap: "0.5rem", width: "100%", justifyContent: "center", alignItems: "center" }}>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem", width: "100%", justifyContent: "center", alignItems: "center" }}>
             {
                 cardNumbersArray.map((n) =>
                     // <GlowButton

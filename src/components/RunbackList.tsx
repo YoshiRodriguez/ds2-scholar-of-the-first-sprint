@@ -15,8 +15,7 @@ function RunbackList() {
     const totalBosses: number = 42;
 
     return (
-        <div className="">
-
+        <div >
             <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem", marginBottom: "2rem" }}>
 
                 <input
@@ -43,13 +42,13 @@ function RunbackList() {
                 </select>
 
             </div>
-            <div style={{ display: "flex", flexWrap: "wrap", marginTop: "1rem", marginBottom: "1rem", justifyContent: "space-around", alignItems: "center" }}>
-                <PagingButtonList
-                    totalCards={maxCards}
-                    totalBosses={totalBosses}
-                    newPageStateUpdater={setStartingCard}
-                />
-            </div>
+            {/* <div style={{ display: "flex", flexWrap: "wrap", marginTop: "1rem", marginBottom: "1rem", justifyContent: "space-around", alignItems: "center" }}>
+            </div> */}
+            <PagingButtonList
+                totalCards={maxCards}
+                totalBosses={totalBosses}
+                newPageStateUpdater={setStartingCard}
+            />
 
 
 
@@ -80,6 +79,7 @@ function RunbackList() {
 
             }
 
+            {/* <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "1.5rem" }} > */}
             {bossRunbacks
                 .filter((boss) => boss.title.toLowerCase().includes(searchQuery.trim().toLowerCase()))
                 .filter((boss) => difficultyLevel.trim().toLowerCase() === "all" || boss.difficulty.toLowerCase().includes(difficultyLevel.trim().toLowerCase()))
@@ -96,6 +96,9 @@ function RunbackList() {
                         notes={item.notes}
                     />
                 ))}
+
+            {/* </div> */}
+
         </div>
     )
 }

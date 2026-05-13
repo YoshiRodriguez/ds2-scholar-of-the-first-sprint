@@ -25,13 +25,13 @@ function HomePage() {
             <h3>Well met, skeleton! This page was created to help other fellow undead find their way from the bonfire to the boss. Here, I'm documenting optimal, easy routes to every boss fog gate in Dark Souls II: Scholar of the First Sin by using videos showcasing these tips and techniques.
             </h3>
             <h3><b>But why?</b> To prove that, with proper routing, spatial awareness, and resource management, no runback is inherently unfair.</h3>
-            <h3>If you wish to know who will be accompanying us in our journey, click the summon sign below. Otherwise, you can go check the runbacks straight away. Whichever your choice, please make sure to check the <b>guidelines</b>  </h3>
+            <h3>If you wish to know who will be accompanying us in our journey, click the summon sign below. Otherwise, you can go check the runbacks straight away. Whichever your choice, please make sure to check the <b>guidelines</b> by clicking the button right below.</h3>
 
 
             <div className="ds-line-faded" />
 
 
-            <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-around", alignItems: "center" }}>
+            <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-around", alignItems: "center", gap: "1.5rem" }}>
 
                 <div style={{ textAlign: "center" }}>
                     <Link to="/haures" style={{ textDecoration: "none" }}>
