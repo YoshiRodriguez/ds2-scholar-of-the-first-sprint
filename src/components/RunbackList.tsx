@@ -79,25 +79,25 @@ function RunbackList() {
 
             }
 
-            {/* <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "1.5rem" }} > */}
-            {bossRunbacks
-                .filter((boss) => boss.title.toLowerCase().includes(searchQuery.trim().toLowerCase()))
-                .filter((boss) => difficultyLevel.trim().toLowerCase() === "all" || boss.difficulty.toLowerCase().includes(difficultyLevel.trim().toLowerCase()))
-                .slice(startingCard, startingCard + maxCards)
-                .map((item) => (
-                    <RunbackCard
-                        key={item.id}
-                        title={item.title}
-                        location={item.location}
-                        url={item.url}
-                        estimatedTime={item.estimatedTime}
-                        difficulty={item.difficulty}
-                        requirements={item.requirements}
-                        notes={item.notes}
-                    />
-                ))}
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 300px), 1fr))", gap: "1.5rem" }} >
+                {bossRunbacks
+                    .filter((boss) => boss.title.toLowerCase().includes(searchQuery.trim().toLowerCase()))
+                    .filter((boss) => difficultyLevel.trim().toLowerCase() === "all" || boss.difficulty.toLowerCase().includes(difficultyLevel.trim().toLowerCase()))
+                    .slice(startingCard, startingCard + maxCards)
+                    .map((item) => (
+                        <RunbackCard
+                            key={item.id}
+                            title={item.title}
+                            location={item.location}
+                            url={item.url}
+                            estimatedTime={item.estimatedTime}
+                            difficulty={item.difficulty}
+                            requirements={item.requirements}
+                            notes={item.notes}
+                        />
+                    ))}
 
-            {/* </div> */}
+            </div>
 
         </div>
     )

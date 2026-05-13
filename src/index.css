@@ -32,8 +32,7 @@ body {
   background-color: var(--ds-bg);
   color: var(--ds-text-primary);
   font-family: "EB Garamond", serif;
-  /* font-size: 1.3rem; */
-  font-size: clamp(0.6rem, 2vw, 1.2rem);
+  font-size: clamp(0.9rem, 2.8vw, 1.3rem);
   -webkit-font-smoothing: antialiased;
 }
 
@@ -64,7 +63,7 @@ h3 {
 
 .ds-header h1 {
   font-family: "OptimusPrinceps", serif;
-  font-size: clamp(1.5rem, 5vw, 3rem);
+  font-size: clamp(2.5rem, 8vw, 5rem);
   color: var(--ds-accent-gold);
   letter-spacing: 2px;
   text-shadow: 0 2px 10px rgba(212, 175, 55, 0.2);
@@ -96,7 +95,7 @@ h3 {
 
 .ds-text-gold h1 {
   font-family: "OptimusPrinceps", serif;
-  font-size: clamp(2.5rem, 5vw, 5rem);
+  font-size: clamp(2.5rem, 8vw, 5rem);
   color: transparent !important;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3), 0 0 8px rgba(184, 146, 62, 0.3);
   letter-spacing: 2px;
@@ -104,7 +103,6 @@ h3 {
 
 h3.ds-text-gold {
   font-family: "OptimusPrinceps", serif;
-  /* font-size: clamp(0.6rem, 2.5vw, 1.2rem); */
   color: transparent !important;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3), 0 0 8px rgba(184, 146, 62, 0.3);
   letter-spacing: 1px;
@@ -113,6 +111,7 @@ h3.ds-text-gold {
 .ds-text-gold p {
   color: transparent !important;
   font-style: italic;
+  font-size: clamp(1rem, 2.7vw, 1.7rem);
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3), 0 0 8px rgba(184, 146, 62, 0.3);
   letter-spacing: 1px;
 }
