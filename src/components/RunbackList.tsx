@@ -11,8 +11,12 @@ function RunbackList() {
     const [searchQuery, setSearchQuery] = useState("");
     const [difficultyLevel, setDifficultyLevel] = useState("All");
     const [startingCard, setStartingCard] = useState(0);
-    const [maxCards, setMaxCards] = useState(3);
-    const totalBosses: number = 42;
+    const [maxCards, setMaxCards] = useState(5);
+
+    const filteredBosses =
+        bossRunbacks
+            .filter((boss) => boss.title.toLowerCase().includes(searchQuery.trim().toLowerCase()))
+            .filter((boss) => difficultyLevel.trim().toLowerCase() === "all" || boss.difficulty.toLowerCase().includes(difficultyLevel.trim().toLowerCase()))
 
     return (
         <div >
@@ -25,16 +29,26 @@ function RunbackList() {
                     className="ds-input"
                     style={{ flex: "1" }}
                     value={searchQuery}
-                    onChange={(b) => setSearchQuery(b.target.value)}
+                    onChange={(b) => {
+                        setSearchQuery(b.target.value);
+                        setStartingCard(0);
+                    }}
                 />
-                <select className="ds-input" onChange={(d) => setDifficultyLevel(d.target.value)}>
+                <select className="ds-input" onChange={(d) => {
+                    setDifficultyLevel(d.target.value);
+                    setStartingCard(0);
+
+                }}>
                     <option value="All">All</option>
                     <option value="Easy">Easy</option>
                     <option value="Medium">Medium</option>
                     <option value="Hard">Hard</option>
                     <option value="Brutal">Brutal</option>
                 </select>
-                <select className="ds-input" onChange={(m) => setMaxCards(Number.parseInt(m.target.value))}>
+                <select className="ds-input" onChange={(m) => {
+                    setMaxCards(Number.parseInt(m.target.value));
+                    setStartingCard(0);
+                }}>
                     <option value="3">3</option>
                     <option value="5">5</option>
                     <option value="10">10</option>
@@ -46,7 +60,7 @@ function RunbackList() {
             </div> */}
             <PagingButtonList
                 totalCards={maxCards}
-                totalBosses={totalBosses}
+                totalBosses={filteredBosses.length}
                 newPageStateUpdater={setStartingCard}
             />
 
@@ -80,9 +94,7 @@ function RunbackList() {
             }
 
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 300px), 1fr))", gap: "1.5rem" }} >
-                {bossRunbacks
-                    .filter((boss) => boss.title.toLowerCase().includes(searchQuery.trim().toLowerCase()))
-                    .filter((boss) => difficultyLevel.trim().toLowerCase() === "all" || boss.difficulty.toLowerCase().includes(difficultyLevel.trim().toLowerCase()))
+                {filteredBosses
                     .slice(startingCard, startingCard + maxCards)
                     .map((item) => (
                         <RunbackCard

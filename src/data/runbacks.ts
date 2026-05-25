@@ -34,7 +34,7 @@ const bossRunbacks = [
         requirements: "None.",
         notes: `This time, you can run past every enemy due to their low movement speed, but beware the mace-wielding Old Knights, as they're the ones with the fastest attack speed and longest reach. A single, well-timed dodge will be enough to run past them. Bait the one standing just outside the fog wall.
         
-        If you haven't killed the Old Dragonslayer first, the Heide Knights will stay put and won't attack you unless you hit them first.`
+        If you haven't killed the Old Dragonslayer yet, the Heide Knights will stay put and won't attack you unless you hit them first.`
     },
     {
         id: 4,
@@ -64,17 +64,19 @@ const bossRunbacks = [
     },
     {
         id: 6,
-        title: "Flexile Sentry",
-        location: "No Man's Wharf",
-        url: "https://www.youtube.com/embed/GEd7qazmAcc",
-        estimatedTime: "01:20",
-        difficulty: "Easy (First Time: Hard)",
-        requirements: "Lowered the bridge shortcut between the right planks and the ship.",
-        notes: `Reaching the other side of the bridge to lower the bridge will require you to run through, essentially, the whole level at least once. Try lighting all torches at once so the runback also becomes easier.
+        title: "Ruin Sentinels",
+        location: "Lost Bastille",
+        url: "https://www.youtube.com/embed/XX8GiQWq-iM",
+        estimatedTime: "01:00",
+        difficulty: "Easy (First Time: Medium)",
+        requirements: "Unpetrified the statue blocking the door to the prison cells building, then opened the door shortcut donwstairs.",
+        notes: `The first time you clear the path towards the Ruin Sentinels, avoid pulling the level that opens the corridor leading to them so that the other swordsmen can't reach you.
         
-        You can make the Varangian Sailor hanging from the planks fall by simply hitting it with a throwing knife. After dealing with the bowman near the intersection, deal with the other Sailor at the left. Kill the other soldier along the way to the ship.
+        You can skip both Undead Jailors along the way and ignore the Stray Hounds next to the bonfire.        
         
-        Above the entrance to the ship's cabins lie both an Undead Jailer and another Sailor. You can simply run past them to reach the fog wall.`
+        The door shortcut lets you avoid the swarm of Royal Swordsmen usually encountered when entering the building, but using it can be tricky; the simplest way of doing so is aligning yourself.        
+
+        You can also summon Pilgrim Belclaire in a prison cell shortly before the gate.`
     }
 ];
 
