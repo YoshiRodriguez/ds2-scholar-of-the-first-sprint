@@ -1,0 +1,68 @@
+import BorderGlow from "./ReactBits/BorderGlow";
+import Timer from "./Timer";
+import YouTubePlayer from "./YouTubePlayer";
+
+interface RunbackCardOldProps {
+	title: string;
+	location: string;
+	url: string;
+	estimatedTime: string;
+	difficulty: string;
+	requirements: string;
+	notes: string;
+}
+
+function RunbackCard({
+	title,
+	location,
+	url,
+	estimatedTime,
+	difficulty,
+	requirements,
+	notes,
+}: Readonly<RunbackCardOldProps>) {
+	return (
+		<div style={{ marginTop: "2rem", marginBottom: "2rem" }}>
+			<BorderGlow
+				edgeSensitivity={5}
+				backgroundColor="#000000ff"
+				borderRadius={0}
+				colors={["#f5e6b2", "#e2c46c", "#b8923e"]}
+			>
+				{/* <div className="ds-card"> */}
+				<div className="ds-card-inner">
+					{/* 1. The Header (Title and Location only!) */}
+					<div className="ds-card-header">
+						<h3 className="ds-card-title">{title}</h3>
+					</div>
+					<div className="ds-card-header">
+						<span className="ds-card-location">{location}</span>
+					</div>
+					<div className="ds-card-header">
+						<div className="ds-card-divider" />
+					</div>
+
+					{/* 2. The Video Embed */}
+					<YouTubePlayer url={url} />
+
+					{/* 3. The Details & Timer */}
+					<Timer estimatedTime={estimatedTime} />
+					<div style={{ textAlign: "justify", textJustify: "inter-word" }}>
+						<p className="ds-card-notes">
+							<strong>○ Difficulty:</strong> {difficulty}
+						</p>
+						<p className="ds-card-notes">
+							<strong>○ Requirements:</strong> {requirements}
+						</p>
+						<p className="ds-card-notes">
+							<strong>○ Notes:</strong> {notes}
+						</p>
+					</div>
+				</div>
+				{/* </div> */}
+			</BorderGlow>
+		</div>
+	);
+}
+
+export default RunbackCard;

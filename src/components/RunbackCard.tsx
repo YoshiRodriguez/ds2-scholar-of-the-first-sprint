@@ -1,63 +1,74 @@
-import YouTubePlayer from "./YouTubePlayer"
-import Timer from "./Timer"
-import BorderGlow from "./ReactBits/BorderGlow"
+import { Link } from "react-router-dom";
+import BorderGlow from "./ReactBits/BorderGlow";
 
 interface RunbackCardProps {
-    title: string;
-    location: string;
-    url: string;
-    estimatedTime: string;
-    difficulty: string;
-    requirements: string;
-    notes: string;
+	id: number;
+	title: string;
+	image: string;
+	location: string;
+	difficulty: string;
 }
 
-function RunbackCard({ title, location, url, estimatedTime, difficulty, requirements, notes }: Readonly<RunbackCardProps>) {
-    return (
-        <div style={{ marginTop: "2rem", marginBottom: "2rem" }}>
-            <BorderGlow
-                edgeSensitivity={5}
-                backgroundColor='#000000ff'
-                borderRadius={0}
-                colors={['#f5e6b2', '#e2c46c', '#b8923e']}
+function RunbackCard({
+	id,
+	title,
+	image,
+	location,
+	difficulty,
+}: Readonly<RunbackCardProps>) {
+	return (
+		<Link
+			to={"/boss/" + id}
+			style={{ height: "100%", textDecoration: "none", color: "inherit" }}
+		>
+			<div className="ds-plaque-outer">
+				<div className="ds-card-inner">
+					<div className="ds-card-header">
+						<h3 className="ds-card-title">{title}</h3>
+					</div>
+					<div className="ds-card-header">
+						<div className="ds-card-divider" />
+					</div>
 
-            >
-                {/* <div className="ds-card"> */}
-                <div className="ds-card-inner">
-                    {/* 1. The Header (Title and Location only!) */}
-                    <div className="ds-card-header">
-                        <h3 className="ds-card-title">{title}</h3>
-                    </div>
-                    <div className="ds-card-header">
-                        <span className="ds-card-location">{location}</span>
-                    </div>
-                    <div className="ds-card-header">
-                        <div className="ds-card-divider" />
-                    </div>
+					<BorderGlow
+						className="ds-title-box"
+						edgeSensitivity={10}
+						backgroundColor="#0e0e10"
+						borderRadius={0}
+						coneSpread={20}
+						animated={true}
+						glowRadius={25}
+						colors={["#f5e6b2", "#e2c46c", "#b8923e"]}
+					>
+						{/* <img
+							src={BossImageTestOverlay}
+							style={{
+								inset: "0",
+								position: "absolute",
+								pointerEvents: "none",
+								mixBlendMode: "multiply",
+							}}
+							alt="Dirt overlay."
+						/> */}
+						<img src={`/boss-thumbnails/${image}`} alt="Boss' image." />
+					</BorderGlow>
 
+					<div className="ds-card-header">
+						<span className="ds-card-location">{location}</span>
+					</div>
+					<div className="ds-card-header">
+						<div className="ds-card-divider" />
+					</div>
 
-                    {/* 2. The Video Embed */}
-                    <YouTubePlayer url={url} />
-
-                    {/* 3. The Details & Timer */}
-                    <Timer estimatedTime={estimatedTime} />
-                    <div style={{ textAlign: 'justify', textJustify: 'inter-word' }}>
-                        <p className="ds-card-notes">
-                            <strong>○ Difficulty:</strong> {difficulty}
-                        </p>
-                        <p className="ds-card-notes">
-                            <strong>○ Requirements:</strong> {requirements}
-                        </p>
-                        <p className="ds-card-notes">
-                            <strong>○ Notes:</strong> {notes}
-                        </p>
-                    </div>
-                </div >
-                {/* </div> */}
-            </BorderGlow>
-        </div>
-
-    )
+					<div style={{ textAlign: "center", textJustify: "inter-word" }}>
+						<p className="ds-card-notes">
+							<strong>○ Difficulty:</strong> {difficulty}
+						</p>
+					</div>
+				</div>
+			</div>
+		</Link>
+	);
 }
 
-export default RunbackCard
+export default RunbackCard;

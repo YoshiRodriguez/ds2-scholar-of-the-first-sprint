@@ -2,134 +2,155 @@
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap");
 
 :root {
-  /* DS Theme Colors */
-  --ds-bg: #09090b;
-  /* Deep dark background */
-  --ds-bg-transp: #09090bb7;
-  /* Deep dark background */
-  --ds-surface: #0e0e10b8;
-  /* Slightly lighter for cards */
-  --ds-accent-gold: #d4af37;
-  /* darker for each card's border */
-  --ds-border-frame-gold: #675d39;
-  /* Bonfire/Soul gold */
-  --ds-accent-hover: #f1c40f;
-  --ds-text-primary: #e4e4e7;
-  --ds-text-muted: #a1a1aa;
-  --ds-border: #27272a;
-  --ds-danger: #ef4444;
-  /* Estus empty / Death red */
+	/* DS Theme Colors */
+	--ds-bg: #09090b;
+	/* Deep dark background */
+	--ds-bg-transp: #09090bb7;
+	/* Deep dark background */
+	--ds-surface: #0e0e10;
+	/* Slightly lighter for cards */
+	--ds-accent-gold: #d2b040;
+	/* --ds-accent-gold: #f5e6b2; */
+	/* --ds-accent-gold: rgba(184, 146, 62, 0.3); */
 
-  /* Typography */
-  --font-body: 'Garamond', Inter, sans-serif;
-  --font-heading: 'Cinzel', Georgia, serif;
-  /* A regal, soul-ish font */
+	/* darker for each card's border */
+	--ds-border-frame-gold: #675d39;
+	--ds-plaque-gold: #695f4b;
+	/* Bonfire/Soul gold */
+	--ds-accent-hover: #f1c40f;
+	--ds-text-primary: #e4e4e7;
+	--ds-text-muted: #a1a1aa;
+	--ds-border: #27272a;
+	--ds-danger: #ef4444;
+	/* Estus empty / Death red */
+
+	/* Typography */
+	--font-body: "Garamond", Inter, sans-serif;
+	--font-heading: "Cinzel", Georgia, serif;
+	/* A regal, soul-ish font */
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  background-color: var(--ds-bg);
-  color: var(--ds-text-primary);
-  font-family: "EB Garamond", serif;
-  font-size: clamp(0.9rem, 2.8vw, 1.3rem);
-  -webkit-font-smoothing: antialiased;
+	margin: 0;
+	padding: 0;
+	background-color: var(--ds-bg);
+	color: var(--ds-text-primary);
+	font-family: "EB Garamond", serif;
+	font-size: clamp(0.9rem, 2.8vw, 1.3rem);
+	-webkit-font-smoothing: antialiased;
 }
 
 /* Base styles to set the mood */
 h1,
 h2,
 h3 {
-  font-family: var(--font-heading);
-  font-weight: 500;
-  margin: 0;
+	font-family: var(--font-heading);
+	font-weight: 520;
+	margin: 0;
 }
 
 .ds-container {
-  display: flex;
-  flex-direction: column;
-  width: min(90%, 1200px);
-  margin: 0 auto;
-  padding: 0.5rem 0.5rem 5rem;
-  gap: 2rem;
-  flex-wrap: wrap;
+	display: flex;
+	flex-direction: column;
+	width: min(90%, 1200px);
+	margin: 0 auto;
+	padding: 0.5rem 0.5rem 5rem;
+	gap: 2rem;
+	flex-wrap: nowrap;
 }
 
 .ds-header {
-  text-align: center;
-  border-bottom: 1px solid var(--ds-border);
-  padding-bottom: 2rem;
+	text-align: center;
+	border-bottom: 1px solid var(--ds-border);
+	padding-bottom: 2rem;
 }
 
 .ds-header h1 {
-  font-family: "OptimusPrinceps", serif;
-  font-size: clamp(2.5rem, 8vw, 5rem);
-  color: var(--ds-accent-gold);
-  letter-spacing: 2px;
-  text-shadow: 0 2px 10px rgba(212, 175, 55, 0.2);
+	font-family: "OptimusPrinceps", serif;
+	font-size: clamp(2.5rem, 8vw, 5rem);
+	color: var(--ds-accent-gold);
+	letter-spacing: 2px;
+	text-shadow: 0 2px 10px rgba(212, 175, 55, 0.2);
 }
 
 .ds-header p {
-  color: var(--ds-text-muted);
-  font-style: italic;
-  font-size: clamp(0.6rem, 2vw, 1.2rem);
+	color: var(--ds-text-muted);
+	font-style: italic;
+	font-size: clamp(0.6rem, 2vw, 1.2rem);
 }
 
 .ds-text-gold {
-  /* The shiny gradient */
-  background: linear-gradient(135deg, #f5e6b2 0%, #e2c46c 30%, #b8923e 60%, #8f6a1f 100%);
+	/* The shiny gradient */
+	background: linear-gradient(
+		135deg,
+		#f5e6b2 0%,
+		#e2c46c 30%,
+		#b8923e 60%,
+		#8f6a1f 100%
+	);
 
-  /* Clip the background to the text */
-  -webkit-background-clip: text;
-  background-clip: text;
+	/* Clip the background to the text */
+	-webkit-background-clip: text;
+	background-clip: text;
 
-  /* Make the actual text transparent so the background shines through! */
-  color: transparent !important;
+	/* Make the actual text transparent so the background shines through! */
+	color: transparent !important;
 
-  /* The subtle glow */
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3), 0 0 8px rgba(184, 146, 62, 0.3);
+	/* The subtle glow */
+	text-shadow:
+		0 1px 0 rgba(255, 255, 255, 0.3),
+		0 0 8px rgba(184, 146, 62, 0.3);
 
-  font-weight: 600;
-  letter-spacing: 0.05em;
+	font-weight: 600;
+	letter-spacing: 0.05em;
 }
 
 .ds-text-gold h1 {
-  font-family: "OptimusPrinceps", serif;
-  font-size: clamp(2.5rem, 8vw, 5rem);
-  color: transparent !important;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3), 0 0 8px rgba(184, 146, 62, 0.3);
-  letter-spacing: 2px;
+	font-family: "OptimusPrinceps", serif;
+	font-size: clamp(2.5rem, 8vw, 5rem);
+	color: transparent !important;
+	text-shadow:
+		0 1px 0 rgba(255, 255, 255, 0.3),
+		0 0 8px rgba(184, 146, 62, 0.3);
+	letter-spacing: 2px;
 }
 
 h3.ds-text-gold {
-  font-family: "OptimusPrinceps", serif;
-  color: transparent !important;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3), 0 0 8px rgba(184, 146, 62, 0.3);
-  letter-spacing: 1px;
+	font-family: "OptimusPrinceps", serif;
+	color: transparent !important;
+	text-shadow:
+		0 1px 0 rgba(255, 255, 255, 0.3),
+		0 0 8px rgba(184, 146, 62, 0.3);
+	letter-spacing: 1px;
 }
 
 .ds-text-gold p {
-  color: transparent !important;
-  font-style: italic;
-  font-size: clamp(1rem, 2.7vw, 1.7rem);
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3), 0 0 8px rgba(184, 146, 62, 0.3);
-  letter-spacing: 1px;
+	color: transparent !important;
+	font-style: italic;
+	font-size: clamp(1rem, 2.7vw, 1.7rem);
+	text-shadow:
+		0 1px 0 rgba(255, 255, 255, 0.3),
+		0 0 8px rgba(184, 146, 62, 0.3);
+	letter-spacing: 1px;
 }
 
 .ds-line-faded {
-  width: 100%;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(184, 146, 62, 0.6), transparent);
-  margin: 0.5rem 0;
+	width: 100%;
+	height: 1px;
+	background: linear-gradient(
+		90deg,
+		transparent,
+		rgba(184, 146, 62, 0.6),
+		transparent
+	);
+	margin: 0.5rem 0;
 }
-
 
 /* 
   Step Card Component Styles 
   Double-box border architecture adapted from MyXoToD:
   https://codepen.io/MyXoToD/pen/VaazQq
 */
-
 
 /* ---  OLD CARD LAYOUT */
 /*
@@ -148,242 +169,251 @@ h3.ds-text-gold {
   transition: transform 0.2s ease, border-color 0.2s ease;
 } */
 
+.ds-plaque-outer {
+	height: 100%;
+	box-sizing: border-box;
+	background-color: var(--ds-plaque-gold);
+	padding: 2px;
+	-webkit-mask:
+		radial-gradient(circle 24px at 0 0, transparent 99%, black 100%) 0 0,
+		radial-gradient(circle 24px at 100% 0, transparent 99%, black 100%) 100% 0,
+		radial-gradient(circle 24px at 0 100%, transparent 99%, black 100%) 0 100%,
+		radial-gradient(circle 24px at 100% 100%, transparent 99%, black 100%) 100%
+		100%;
+	-webkit-mask-size: 51% 51%;
+	-webkit-mask-repeat: no-repeat;
+}
 
 .ds-card {
-  position: relative;
-  /* Required for the absolute dots to anchor to! */
-  margin: 3rem 3rem;
-  padding: 5px;
-  /* The gap between the outer and inner borders */
-  border: 2px solid var(--ds-border-frame-gold);
-  background-color: var(--ds-surface);
-}
-
-/* The Top Two Dots (Attached to the Outer Card) */
-.ds-card::before,
-.ds-card::after {
-  content: "•";
-  position: absolute;
-  width: 14px;
-  height: 14px;
-  font-size: 14px;
-  color: var(--ds-border-frame-gold);
-  border: 2px solid var(--ds-border-frame-gold);
-  line-height: 12px;
-  top: 5px;
-  text-align: center;
-  background-color: var(--ds-surface);
-  /* Add background-color: var(--ds-surface); so the lines behind the dots are hidden! */
-}
-
-
-
-.ds-card::before {
-  left: 5px;
-}
-
-.ds-card::after {
-  right: 5px;
+	position: relative;
+	/* Required for the absolute dots to anchor to! */
+	margin: 3rem 3rem;
+	padding: 5px;
+	/* The gap between the outer and inner borders */
+	border: 2px solid var(--ds-border-frame-gold);
+	background-color: var(--ds-surface);
 }
 
 /* --- CREATING THE INNER BOX --- */
 .ds-card-inner {
-  position: relative;
-  border: 2px solid var(--ds-border-frame-gold);
-  /* The inner border */
-  padding: 3rem 3.5rem;
-  /* This replaces your old ds-card padding! */
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+	height: 100%;
+	box-sizing: border-box;
+	position: relative;
+	/* border: 2px solid var(--ds-border-frame-gold); */
+	background-color: var(--ds-surface);
+	padding: 2.5rem 3rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	/* justify-content: center;
+	align-items: center; */
+	-webkit-mask:
+		radial-gradient(circle 24px at 0 0, transparent 99%, black 100%) 0 0,
+		radial-gradient(circle 24px at 100% 0, transparent 99%, black 100%) 100% 0,
+		radial-gradient(circle 24px at 0 100%, transparent 99%, black 100%) 0 100%,
+		radial-gradient(circle 24px at 100% 100%, transparent 99%, black 100%) 100%
+		100%;
+	-webkit-mask-size: 51% 51%;
+	-webkit-mask-repeat: no-repeat;
 }
-
-/* The bottom Two Dots (Attached to the Outer Card) */
-.ds-card-inner::before,
-.ds-card-inner::after {
-  content: "•";
-  position: absolute;
-  width: 14px;
-  height: 14px;
-  font-size: 14px;
-  color: var(--ds-border-frame-gold);
-  border: 2px solid var(--ds-border-frame-gold);
-  line-height: 14px;
-  bottom: 5px;
-  text-align: center;
-  background-color: var(--ds-surface);
-  /* Add background-color: var(--ds-surface); so the lines behind the dots are hidden! */
-}
-
-
-.ds-card-inner::before {
-  left: 5px;
-}
-
-.ds-card-inner::after {
-  right: 5px;
-}
-
-
 
 .ds-card:hover {
-  border-color: rgba(212, 175, 55, 0.8);
-  box-shadow: rgba(212, 175, 55, 0.15);
-  /* A subtle golden aura */
+	border-color: rgba(212, 175, 55, 0.8);
+	box-shadow: rgba(212, 175, 55, 0.15);
+	/* A subtle golden aura */
 }
 
 .ds-card-divider {
-  height: 2px;
-  width: 95%;
-  background: blue;
-  background: linear-gradient(90deg, hsl(0, 0%, 20%), hsl(48, 100%, 41%), hsl(0, 0%, 20%));
+	height: 1px;
+	width: 95%;
+	/* background: blue; */
+	background: linear-gradient(
+		90deg,
+		hsl(0, 0%, 10%),
+		/* hsl(48, 100%, 41%), */
+		var(--ds-accent-gold),
+		hsl(0, 0%, 10%)
+	);
 }
 
 .ds-card-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
 }
 
 .ds-card-title {
-  color: var(--ds-text-primary);
-  font-size: 1.7rem;
-  font-family: var(--font-heading);
+	margin: 0;
+	color: var(--ds-text-primary);
+	font-size: 1.7rem;
+	font-family: var(--font-heading);
+}
+
+.ds-title-box {
+	width: 85%;
+	height: auto;
+	margin: 0.5rem auto;
+	padding: 0.5rem 0.5rem;
+	text-align: center;
+}
+
+.ds-title-box img {
+	width: 100%; /* Makes the SVG fill the new square box */
+	height: 100%;
+	filter: drop-shadow(0 0 12px rgba(111, 74, 6, 0.6));
 }
 
 .ds-card-location {
-  font-size: 1.05rem;
-  color: var(--ds-accent-gold);
-  text-transform: uppercase;
-  letter-spacing: 1px;
+	font-size: 1.2rem;
+	color: var(--ds-accent-gold);
+	text-transform: uppercase;
+	letter-spacing: 1px;
 }
 
 .ds-card-notes {
-  color: var(--ds-text-muted);
-  font-size: 1.25rem;
-  line-height: 1.5;
-  margin: 0.25rem 0;
-  white-space: pre-line;
+	color: var(--ds-text-muted);
+	font-size: 1.25rem;
+	line-height: 1.5;
+	margin: 0.25rem 0;
+	white-space: pre-line;
 }
 
 .ds-card-notes strong {
-  color: var(--ds-accent-gold);
-  font-size: 1.4rem;
-  letter-spacing: 1px;
+	color: var(--ds-accent-gold);
+	font-size: 1.2rem;
+	letter-spacing: 1px;
 }
 
 /* Style for sidebar cards and layout */
 .ds-sidebar {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  /* Take up the full screen height */
-  width: 300px;
-  /* Fixed width for the menu */
-  background: rgba(10, 10, 10, 0.85);
-  /* Deep dark glass */
-  backdrop-filter: blur(8px);
-  /* Blur the background behind it! */
-  border-right: 1px solid rgba(184, 146, 62, 0.2);
-  /* A very subtle gold line on the right edge */
-  padding: 4rem 2rem;
-  /* Breathing room on top and sides */
-  gap: 1.5rem;
-  /* Even spacing between buttons */
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	/* Take up the full screen height */
+	width: 300px;
+	/* Fixed width for the menu */
+	background: rgba(10, 10, 10, 0.85);
+	/* Deep dark glass */
+	backdrop-filter: blur(8px);
+	/* Blur the background behind it! */
+	border-right: 1px solid rgba(184, 146, 62, 0.2);
+	/* A very subtle gold line on the right edge */
+	padding: 4rem 2rem;
+	/* Breathing room on top and sides */
+	gap: 1.5rem;
+	/* Even spacing between buttons */
 }
 
 /* The Magic Trick: Force all buttons inside the sidebar to be identical! */
 .ds-sidebar .ds-btn {
-  width: 100%;
-  text-align: center;
-  padding: 1rem;
-  letter-spacing: 0.15em;
+	width: 100%;
+	text-align: center;
+	padding: 1rem;
+	letter-spacing: 0.15em;
 }
-
-
 
 /* Styles for textboxes and input fields */
 .ds-input {
-  background-color: var(--ds-bg);
-  color: var(--ds-text-primary);
-  border: 1px solid var(--ds-border);
-  padding: 0.75rem 1rem;
-  font-family: var(--font-body);
-  font-size: 1.25rem;
-  border-radius: 4px;
-  outline: none;
-  transition: all 0.2s ease;
+	background-color: var(--ds-bg);
+	color: var(--ds-text-primary);
+	border: 1px solid var(--ds-border);
+	padding: 0.75rem 1rem;
+	font-family: var(--font-body);
+	font-size: 1.25rem;
+	/* border-radius: 4px; */
+	outline: none;
+	transition: all 0.2s ease;
 }
 
 .ds-input:focus {
-  border-color: var(--ds-accent-gold);
-  box-shadow: 0 0 8px rgba(212, 175, 55, 0.2);
+	border-color: var(--ds-accent-gold);
+	box-shadow: 0 0 8px rgba(212, 175, 55, 0.2);
+}
+
+/* Scoped, borderless inputs with cobalt underlines */
+.ds-filter-panel .ds-input {
+	background-color: rgba(5, 5, 5, 0.6);
+	color: var(--ds-text-primary);
+	border: none;
+	border-bottom: 2px solid rgba(74, 114, 169, 0.3); /* Muted slate-cobalt */
+	border-radius: 0; /* Sharp corners */
+	padding: 0.75rem 1rem;
+	font-family: var(--font-body);
+	font-size: 1.2rem;
+	outline: none;
+	transition: all 0.3s ease;
+}
+
+/* Magical focus and hover response */
+.ds-filter-panel .ds-input:hover,
+.ds-filter-panel .ds-input:focus {
+	border-bottom-color: rgba(90, 150, 255, 0.85); /* Shimmering cobalt */
+	box-shadow: 0 4px 12px rgba(74, 114, 169, 0.15); /* Subtle magical glow */
 }
 
 .ds-overlay {
-  display: flex;
-  flex-direction: row;
-  position: fixed;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-color: var(--ds-bg-transp);
-  z-index: 100;
+	display: flex;
+	flex-direction: row;
+	position: fixed;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: var(--ds-bg-transp);
+	z-index: 100;
 }
-
-
 
 /* YouTube Player Component Styles */
 .ds-video-wrapper {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  /* The holy grail responsive video trick! */
-  border-radius: 6px;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
-  border: 1px solid var(--ds-border);
-  margin-bottom: 1rem;
+	width: 100%;
+	aspect-ratio: 16 / 9;
+	/* The holy grail responsive video trick! */
+	border-radius: 6px;
+	overflow: hidden;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+	border: 1px solid var(--ds-border);
+	margin-bottom: 1rem;
 }
 
 .ds-video-wrapper iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
+	width: 100%;
+	height: 100%;
+	border: none;
 }
 
 /* Timer Component Styles */
 .ds-timer {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
+	display: flex;
+	align-items: center;
+	gap: 1rem;
 
-  /* Using these two lines to fix layouts in mobile! */
-  flex-wrap: wrap;
-  justify-content: space-around;
+	/* Using these two lines to fix layouts in mobile! */
+	flex-wrap: wrap;
+	justify-content: space-around;
 
-  padding: 1rem;
-  background: var(--ds-surface);
-  border: 1px solid var(--ds-border);
-  border-radius: 8px;
-  margin-bottom: 2rem;
+	padding: 1rem;
+	background: var(--ds-surface);
+	border: 1px solid var(--ds-border);
+	border-radius: 8px;
+	margin-bottom: 2rem;
 }
 
 .ds-timer-display {
-  font-family: var(--font-heading);
-  font-size: 3.5rem;
-  font-weight: bold;
-  color: var(--ds-accent-gold);
-  text-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
-  letter-spacing: 2px;
+	font-family: var(--font-heading);
+	font-size: 3.5rem;
+	font-weight: bold;
+	color: var(--ds-accent-gold);
+	text-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+	letter-spacing: 2px;
 }
 
 .ds-timer-controls {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
+	display: flex;
+	gap: 1rem;
+	justify-content: center;
 }
 
 /*COMMENTED: reused the .ds-button class to apply the DRY (Don't Repeat Yourself) principle.*/
@@ -418,161 +448,163 @@ h3.ds-text-gold {
 } */
 
 .ds-btn {
-  background: transparent;
-  border: 1px solid var(--ds-border);
-  color: var(--ds-text-primary);
-  padding: 0.5rem 1.5rem;
-  border-radius: 4px;
-  font-family: var(--font-body);
-  font-size: 1rem;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  text-decoration: none;
+	background: transparent;
+	border: 1px solid var(--ds-border);
+	color: var(--ds-text-primary);
+	padding: 0.5rem 1.5rem;
+	border-radius: 4px;
+	font-family: var(--font-body);
+	font-size: 1rem;
+	cursor: pointer;
+	transition: all 0.2s ease;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	text-decoration: none;
 }
 
 .ds-btn:hover {
-  border-color: var(--ds-accent-gold);
-  color: var(--ds-accent-gold);
-  background: rgba(212, 175, 55, 0.05);
+	border-color: var(--ds-accent-gold);
+	color: var(--ds-accent-gold);
+	background: rgba(212, 175, 55, 0.05);
 }
 
 .ds-btn-danger:hover {
-  border-color: var(--ds-danger);
-  color: var(--ds-danger);
-  background: rgba(239, 68, 68, 0.05);
+	border-color: var(--ds-danger);
+	color: var(--ds-danger);
+	background: rgba(239, 68, 68, 0.05);
 }
 
 .ds-icon-btn {
-  /* Inherit the colors and borders from ds-btn! */
-  background: var(--ds-surface);
-  color: var(--ds-text-primary);
-  border: 1px solid var(--ds-border);
+	/* Inherit the colors and borders from ds-btn! */
+	background: var(--ds-surface);
+	color: var(--ds-text-primary);
+	border: 1px solid var(--ds-border);
 
-  /* Make them perfectly square */
-  width: 45px;
-  height: 45px;
-  border-radius: 4px;
-  /* Change to 50% if you want circles! */
+	/* Make them perfectly square */
+	width: 45px;
+	height: 45px;
+	border-radius: 4px;
+	/* Change to 50% if you want circles! */
 
-  /* Center the icon perfectly */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.2rem;
+	/* Center the icon perfectly */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.2rem;
 
-  cursor: pointer;
-  transition: all 0.2s ease;
+	cursor: pointer;
+	transition: all 0.2s ease;
 }
 
 .ds-icon-btn:hover {
-  border-color: var(--ds-accent-gold);
-  color: var(--ds-accent-gold);
-  background: rgba(212, 175, 55, 0.1);
+	border-color: var(--ds-accent-gold);
+	color: var(--ds-accent-gold);
+	background: rgba(212, 175, 55, 0.1);
 }
-
 
 /* Embers Background */
 
 .embers-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: -1;
-  /* Sit behind all content */
-  pointer-events: none;
-  /* Let the user click through them */
-  overflow: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: -1;
+	/* Sit behind all content */
+	pointer-events: none;
+	/* Let the user click through them */
+	overflow: hidden;
 }
 
 .ember {
-  position: absolute;
-  bottom: -20px;
-  /* bottom: 50vh; */
-  width: 6px;
-  height: 6px;
-  /* Start just below the screen */
-  border-radius: 50%;
-  background: #ff7300;
-  box-shadow: 0 0 8px 2px #ff4500, 0 0 15px 4px #ff0000;
-  /* The speeds will be controlled by React! */
-  animation-name: ember-drift, ember-flicker;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear, ease-in-out;
+	position: absolute;
+	bottom: -20px;
+	/* bottom: 50vh; */
+	width: 6px;
+	height: 6px;
+	/* Start just below the screen */
+	border-radius: 50%;
+	background: #ff7300;
+	box-shadow:
+		0 0 8px 2px #ff4500,
+		0 0 15px 4px #ff0000;
+	/* The speeds will be controlled by React! */
+	animation-name: ember-drift, ember-flicker;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear, ease-in-out;
 }
 
 @keyframes ember-drift {
-  0% {
-    transform: translateY(0) translateX(0);
-  }
+	0% {
+		transform: translateY(0) translateX(0);
+	}
 
-  100% {
-    transform: translateY(-110vh) translateX(100px);
-  }
+	100% {
+		transform: translateY(-110vh) translateX(100px);
+	}
 }
 
 @keyframes ember-flicker {
+	0%,
+	100% {
+		opacity: 0.9;
+		box-shadow:
+			0 0 8px 2px #ff4500,
+			0 0 15px 4px #ff0000;
+	}
 
-  0%,
-  100% {
-    opacity: 0.9;
-    box-shadow: 0 0 8px 2px #ff4500, 0 0 15px 4px #ff0000;
-  }
-
-  50% {
-    opacity: 0.3;
-    box-shadow: 0 0 2px 0px #ff4500, 0 0 5px 1px #ff0000;
-  }
+	50% {
+		opacity: 0.3;
+		box-shadow:
+			0 0 2px 0px #ff4500,
+			0 0 5px 1px #ff0000;
+	}
 }
-
-
 
 /* --- Elegant Stopwatch UI --- */
 .countdown-timer {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
+	display: flex;
+	justify-content: center;
+	gap: 1rem;
+	flex-wrap: wrap;
 }
 
 .countdown-segment {
-  width: fit-content;
-  padding: 1rem 1.5rem;
-  text-align: center;
-  background: var(--ds-surface);
-  border: 1px solid var(--ds-border);
-  border-radius: 8px;
-  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+	width: fit-content;
+	padding: 1rem 1.5rem;
+	text-align: center;
+	background: var(--ds-surface);
+	border: 1px solid var(--ds-border);
+	border-radius: 8px;
+	box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
 }
 
 .countdown-number {
-  font-size: 2.5rem;
-  font-family: var(--font-heading);
-  color: var(--ds-accent-gold);
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-  display: block;
-  line-height: 1;
+	font-size: 2.5rem;
+	font-family: var(--font-heading);
+	color: var(--ds-accent-gold);
+	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+	display: block;
+	line-height: 1;
 }
 
 .countdown-unit {
-  font-family: var(--font-body);
-  font-size: 0.9rem;
-  color: var(--ds-text-muted);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-top: 0.3rem;
-  display: block;
+	font-family: var(--font-body);
+	font-size: 0.9rem;
+	color: var(--ds-text-muted);
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin-top: 0.3rem;
+	display: block;
 }
 
-@media(max-width: 600px) {
-  .ds-timer {
-    justify-content: center;
-  }
+@media (max-width: 600px) {
+	.ds-timer {
+		justify-content: center;
+	}
 
-  .countdown-number {
-    font-size: 2rem;
-  }
+	.countdown-number {
+		font-size: 2rem;
+	}
 }
