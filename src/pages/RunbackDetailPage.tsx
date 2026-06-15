@@ -23,6 +23,8 @@ function RunbackDetailPage() {
 					*PAGE UNDER CONSTRUCTION*
 				</div>
 
+				<div className="ds-line-faded" />
+
 				{/* --- TEMPORARY DATA MOCKUP FOR TESTING --- */}
 				<div style={{ display: "flex", gap: "2rem", marginTop: "2rem" }}>
 					<img
@@ -59,12 +61,14 @@ function RunbackDetailPage() {
 						height="400"
 						src={boss.url}
 						title="YouTube video player"
-						// frameBorder="0"
 						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 						allowFullScreen
+						referrerPolicy="strict-origin-when-cross-origin"
 						style={{ border: "0px" }}
 					></iframe>
 				</div>
+
+				<div className="ds-line-faded" />
 			</div>
 		);
 	}
