@@ -130,6 +130,7 @@ function RunbackList() {
 							title={item.title}
 							location={item.location}
 							difficulty={item.difficulty}
+							estimatedTime={item.estimatedTime}
 						/>
 					))}
 			</div>

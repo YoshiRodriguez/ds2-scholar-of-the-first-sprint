@@ -7,6 +7,7 @@ interface RunbackCardProps {
 	image: string;
 	location: string;
 	difficulty: string;
+	estimatedTime: string;
 }
 
 function RunbackCard({
@@ -15,6 +16,7 @@ function RunbackCard({
 	image,
 	location,
 	difficulty,
+	estimatedTime,
 }: Readonly<RunbackCardProps>) {
 	return (
 		<Link
@@ -63,6 +65,9 @@ function RunbackCard({
 					<div style={{ textAlign: "center", textJustify: "inter-word" }}>
 						<p className="ds-card-notes">
 							<strong>○ Difficulty:</strong> {difficulty}
+						</p>
+						<p className="ds-card-notes">
+							<strong>○ Time:</strong> {estimatedTime}
 						</p>
 					</div>
 				</div>
