@@ -7,7 +7,7 @@ const bossRunbacks = [
 		estimatedTime: "01:00",
 		difficulty: "Easy",
 		requirements: "Opened the barred door downstairs to the right.",
-		image: "the-last-giant.png",
+		image: "the-last-giant.webp",
 		notes: `The very first boss (if following the intended route). You can skip the two soldiers downstairs, but killing them is preferred. The only required kill is the soldier just outside the fog wall.
         You can also summon Sellsword Luet and Mild Mannered Pate (if you completed his mini-quest) right outside the fog wall.`,
 	},
@@ -149,6 +149,18 @@ const bossRunbacks = [
 		difficulty: "Easy",
 		requirements: "Unlocked the Upper Earthen Peak bonfire.",
 		image: "mytha-the-baneful-queen.png",
+		notes: `TODO.`,
+	},
+	{
+		id: 12,
+		title: "Smelter Demon",
+		location: "Earthen Peak",
+		url: "https://www.youtube.com/embed/nieBx0j1mQE",
+		estimatedTime: "00:35",
+		difficulty: "Brutal",
+		requirements:
+			"Lowered both sides of the middle bridge connecting the lava pool.",
+		image: "smelter-demon-1.png",
 		notes: `TODO.`,
 	},
 ];

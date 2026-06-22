@@ -67,7 +67,9 @@ function RunbackCard({
 							<strong>○ Difficulty:</strong> {difficulty}
 						</p>
 						<p className="ds-card-notes">
-							<strong>○ Time:</strong> {estimatedTime}
+							<strong>○ Time:</strong>
+							<br />
+							{estimatedTime} (mm:ss)
 						</p>
 					</div>
 				</div>
